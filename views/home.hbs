@@ -6,14 +6,19 @@
         <p>{{ description }}</p>
         <p>Location: {{ location }}</p>
         <p>Likes: {{ likes }}
-        <form method="POST" action="/event/like">
-        <input type="hidden" value="{{id}}" name="id">
-        <input type="submit" class="btn btn-success" value="Like">
-        </form>
-        <form method="POST" action="/event/unlike">
-        <input type="hidden" value="{{id}}" name="id">
-        <input type="submit" class="btn btn-danger" value="UN-Like">
-        </form>
+        <div class="d-flex">
+            <form method="POST" action="/event/like">
+                    <input type="hidden" value="{{id}}" name="id">
+                    <input type="submit" class="btn btn-success" value="Like">
+            </form>
+        </div>
+
+        <div class="d-flex">
+            <form method="POST" action="/event/unlike">
+                    <input type="hidden" value="{{id}}" name="id">
+                    <input type="submit" class="btn btn-danger" value="UN-Like">
+            </form>
+        </div>
         </p>
     </li>
   {{/events}}
